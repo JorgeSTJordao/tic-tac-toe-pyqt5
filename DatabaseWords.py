@@ -9,9 +9,12 @@ class DatabaseWords:
         self.words = ["banana", "bow", "weapon", "game", "brazil"]
         self.words_selected = []
 
-    '''Return a selected word from the main list of words'''
-
     def select_word(self):
+        """
+        It's going to choose a word from words list
+
+        :return: the selected word
+        """
         if len(self.words) != 0:
             word_selected = random.choice(self.words)
 
@@ -19,20 +22,24 @@ class DatabaseWords:
 
             return word_selected
 
-        self.reset_words()
-
-    '''Pop an item already selected from the main list'''
+        self.reset_words_selected()
 
     def words_already_selected(self, word_selected):
+        """
+        Pop an item just selected, by your index, from the words list
+
+        :param word_selected: the word selected in the "select_word" function
+        """
         self.words_selected.append(word_selected)
 
         i = self.words.index(word_selected)
 
         self.words.pop(i)
 
-    '''Reset list of words already selected to keep the game in loop'''
-
-    def reset_words(self):
+    def reset_words_selected(self):
+        """
+        Reset list of words already selected to keep the game looping
+        """
         self.words = self.words_selected
 
         self.words_selected = []

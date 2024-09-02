@@ -6,20 +6,32 @@ class Interface:
         self.hangman = Hangman()
 
     def options(self):
+        """
+        Select an option from the home screen. It could be play or leave
 
-        option = int(input("""
-            Select an option:
-            [1] - Play 
-            [2] - Exit
-        """))
+        code list: [
+            1: play the game
+            2: leave the game
+        ]
+
+        :return: code from the list
+        """
+        print("SELECT AN OPTION")
+        print("[1] - Play")
+        print("[2] - Exit")
+
+        option = int(input("R: "))
 
         if option == 1:
             self.hangman.select_word()
-            return 1
+            self.play()
 
-        return 2
+        print("Bye bye!")
 
     def play(self):
+        """
+        Show the main information to the user
+        """
         while True:
             print(f"Letters selected: {self.hangman.letters_selected}")
             print(f"Life: {self.hangman.life}")
@@ -31,7 +43,10 @@ class Interface:
             value = self.hangman.attempt(letter_selected)
 
             if value == -1:
+                self.hangman.reset()
                 break
             elif value == 2:
+                self.hangman.reset()
                 break
 
+        self.options()
