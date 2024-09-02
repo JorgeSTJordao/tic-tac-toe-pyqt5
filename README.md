@@ -10,10 +10,11 @@ Learn how to create a simple hangman game using Python and Object-Oriented Progr
 
 # 📚 Table Of Contents
 
-- Databasewords: is where a word is going to be chosen
-- Hangman: is where all the logic of game happens
-- Interface: is where the user can interact and see your results
-<hr>
+|      File Name     |                         Objective                          |
+| :----------------: | :---------------------------------------------------: |
+|    Databasewords   |    It's where a word is going to be chosen    |
+|   Hangman  |  It's where all the logic of game happens  |
+|   Interface  |  It's where the user can interact and see your results  |
 
 # 🚀 Next Steps 
 
