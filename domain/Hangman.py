@@ -1,4 +1,5 @@
-from DatabaseWords import DatabaseWords
+from data.DatabaseWords import DatabaseWords
+
 
 """
 A representation of the man body (constant)
@@ -10,7 +11,7 @@ class Hangman:
     def __init__(self):
         self.database_word = DatabaseWords()
         self.word = ""
-        self.word_gamer = ""
+        self.word_gamer = []
         self.letters_selected = []
         self.life = life
 
@@ -19,9 +20,12 @@ class Hangman:
         This function is going to get the word selected in database object
 
         :return: the word that user can see on screen
+
         """
+
         self.word = self.database_word.select_word()
-        self.word_gamer = ["_" for i in range(len(self.word))]
+        self.word_gamer = ["_" for _ in range(len(self.word))]
+
         return self.word_gamer
 
     def attempt(self, letter):
@@ -37,10 +41,13 @@ class Hangman:
         :param letter: The word chosen by user
         :return: the code that represents the state
         """
+
         if letter in self.letters_selected:
             print("Letter already selected")
             return 3
+
         elif letter in self.word:
+
             for i in range(len(self.word)):
 
                 if letter == self.word[i]:
@@ -48,6 +55,7 @@ class Hangman:
 
             if not ("_" in self.word_gamer):
                 print("You win")
+
                 return 2
 
             self.letters_selected.append(letter)
@@ -56,6 +64,7 @@ class Hangman:
 
             if self.life == 0:
                 print("You Lose")
+
                 return -1
 
             self.letters_selected.append(letter)
@@ -64,6 +73,7 @@ class Hangman:
         """
         Restart the hangman
         """
+
         self.word = ""
         self.word_gamer = ""
         self.letters_selected = []

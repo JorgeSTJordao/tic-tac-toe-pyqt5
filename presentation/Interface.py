@@ -1,7 +1,8 @@
-from Hangman import Hangman
+from domain.Hangman import Hangman
 
 
 class Interface:
+
     def __init__(self):
         self.hangman = Hangman()
 
@@ -16,6 +17,7 @@ class Interface:
 
         :return: code from the list
         """
+
         print("SELECT AN OPTION")
         print("[1] - Play")
         print("[2] - Exit")
@@ -45,6 +47,7 @@ class Interface:
             if value == -1:
                 self.hangman.reset()
                 break
+
             elif value == 2:
                 self.hangman.reset()
                 break
