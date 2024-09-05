@@ -1,7 +1,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
-<h1 align="center">Create a Hangman with Python</h1>
+<h1 align="center"> <img src="https://skillicons.dev/icons?i=python"/> Create a Hangman with Python</h1>
 <hr>
 
 # :star: Aim Of The Project
@@ -31,9 +31,13 @@ Learn how to create a simple hangman game using Python and Object-Oriented Progr
   words_list = words.json()
 
   print(words_lists)
+
+  >>> Out: [word0, word1, word(n - 1)]
 ```
 
 # 🚀 Next Steps 
 
-- For the interface we can improve create a website using Flask framwork
-- We can create levels for the game (Easy level is for small and common words, Medium Level is for big words, and Hard Level for big or small words that are not common) | ⚠️ For this project is only english words |
+- Create a website using Flask framework and Bootstrap
+- Treat exceptions
+
+<h3>⚠️ For this project is only english words </h3>
