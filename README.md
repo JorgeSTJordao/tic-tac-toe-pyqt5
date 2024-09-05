@@ -1,8 +1,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
-<h1 align="center"> <img src="https://skillicons.dev/icons?i=python"/> Create a Hangman with Python</h1>
-<hr>
+<h1 align="center"> Create a Hangman with Python</h1>
 
 # :star: Aim Of The Project
 
