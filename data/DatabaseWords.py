@@ -8,28 +8,41 @@ class DatabaseWords:
     This class works like the database or chooser
     """
 
-    def __init__(self):
-        self.word_api = WordApi()
+    def __init__(self, url):
+        self.word_api = WordApi(url)
         self.words = []
 
-    def select_word(self):
+    def is_empty(self):
+        return len(self.words) == 0
+
+    def get_words(self):
+        word_selected = random.choice(self.words)
+
+        self.delete(word_selected)
+
+        return random.choice(self.words)
+
+    def query(self):
         """
-        It's going to choose a word from words list
+        Select a word from words list
 
         :return: the selected word
         """
 
-        if len(self.words) == 0:
-            self.add_new_words()
+        if self.is_empty:
+            self.create()
 
-        word_selected = random.choice(self.words)
+        return self.get_words()
 
-        self.pop_word_selected(word_selected)
+    def create(self):
+        """
+        Reset list of words already selected to keep the game looping
+        """
 
-        return word_selected
+        self.words = self.word_api.request()
+        self.query()
 
-
-    def pop_word_selected(self, word_selected):
+    def delete(self, word_selected):
         """
         Remove the item selected by your index, from the words list
 
@@ -38,12 +51,3 @@ class DatabaseWords:
 
         i = self.words.index(word_selected)
         self.words.pop(i)
-
-    def add_new_words(self):
-        """
-        Reset list of words already selected to keep the game looping
-        """
-
-        self.words = self.word_api.get_words()
-
-        self.select_word()

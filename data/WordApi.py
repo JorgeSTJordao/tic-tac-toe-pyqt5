@@ -6,16 +6,16 @@ class WordApi:
     Api class
     """
 
-    def __init__(self):
-        self.url = "https://random-word-api.herokuapp.com/word?number=10"
+    def __init__(self, url):
+        self.url = url
 
-    def get_words(self):
+    def request(self):
         """
-        get ten words from the api
+        request ten words from api
 
         :return: An array of strings representing which words were selected
         """
 
         words = requests.get(self.url)
-
         return words.json()
+

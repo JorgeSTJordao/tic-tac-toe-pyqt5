@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container my-5">
+    <div class="row">
+
+        <div class="col-8">
+            <h1 class="display-1">Hangman</h1>
+            <h3 class="display-6">Try guess the next before hang the man</h3>
+        </div>
+
+        <div class="col-4">
+            <div class="d-grid gap-2">
+                <a href="{{ url_for('play') }}" class="btn btn-primary btn-lg">Start game</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
