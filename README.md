@@ -5,8 +5,8 @@
 ## Screens
 
 <div style="flex:1">
- <img src="https://github.com/JorgeSTJordao/tic-tac-toe-pyqt5/blob/main/screen.png?raw=true">
- <img src="https://github.com/JorgeSTJordao/tic-tac-toe-pyqt5/blob/main/match.png?raw=true">
+ <img src="https://github.com/JorgeSTJordao/tic-tac-toe-pyqt5/blob/main/screen.png?raw=true" style="width:250px">
+ <img src="https://github.com/JorgeSTJordao/tic-tac-toe-pyqt5/blob/main/match.png?raw=true" style="width:250px">
 </div>
 
 ## Tools
