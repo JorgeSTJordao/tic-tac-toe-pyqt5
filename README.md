@@ -2,6 +2,11 @@
 
  A simple implementation of the classic Tic-Tac-Toe game built with PyQt5, where two players can play together on the same computer. The game detects wins, draws, and provides a restart option for continuous play.
 
+<hr>
+
+If you want to try it without coding, just download it [here](https://drive.google.com/drive/u/0/folders/1WGmWitl7nX-xVRjA4OYKxD0HG5ruSofs) and run the executable according to the path below. <br>
+PATH: *output\screen\screen.exe*
+
 ## Screens
 
 <div style="flex:1">
