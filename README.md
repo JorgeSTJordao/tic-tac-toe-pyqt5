@@ -1,3 +1,3 @@
-# 🎮 Hangman
+# 🎮 Tic-Tac-Toe
 
-This is project where you play the hangman game. At the moment is still being developed the website to provide a good user experience with this game.
+ A simple implementation of the classic Tic-Tac-Toe game built with PyQt5, where two players can play together on the same computer. The game detects wins, draws, and provides a restart option for continuous play.
