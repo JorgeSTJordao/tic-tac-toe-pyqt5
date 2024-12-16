@@ -14,7 +14,7 @@ PATH: *output\screen\screen.exe*
  <img src="https://github.com/JorgeSTJordao/tic-tac-toe-pyqt5/blob/main/match.png?raw=true" style="width:250px">
 </div>
 
-## Tools
+## Technologies
 - PyQT5
 - PyCharm
 
